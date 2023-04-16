@@ -19,9 +19,10 @@ import org.junit.jupiter.api.Test;
             manager.add(book2);
             manager.add(book3);
             Product[] actual = repo.findAll();
-            Product[] expected = {book1, book2,book3};
+            Product[] expected = {book1, book2, book3};
             Assertions.assertArrayEquals(expected, actual);
         }
+
         @Test
         public void TestAdd2Smartphone() {
             Repository repo = new Repository();
@@ -34,10 +35,11 @@ import org.junit.jupiter.api.Test;
             manager.add(smartphone2);
             manager.add(smartphone3);
             Product[] actual = repo.findAll();
-            Product[] expected = {smartphone1, smartphone2,smartphone3};
+            Product[] expected = {smartphone1, smartphone2, smartphone3};
             Assertions.assertArrayEquals(expected, actual);
 
         }
+
         @Test
         public void TestAdd3BookAndSmartphone() {
             Repository repo = new Repository();
@@ -50,7 +52,7 @@ import org.junit.jupiter.api.Test;
             manager.add(smartphone2);
             manager.add(book1);
             Product[] actual = repo.findAll();
-            Product[] expected = {smartphone1, smartphone2,book1};
+            Product[] expected = {smartphone1, smartphone2, book1};
             Assertions.assertArrayEquals(expected, actual);
 
         }
@@ -68,7 +70,7 @@ import org.junit.jupiter.api.Test;
             manager.add(book3);
             repo.removeById(2);
             Product[] actual = repo.findAll();
-            Product[] expected = {book1,book3};
+            Product[] expected = {book1, book3};
             Assertions.assertArrayEquals(expected, actual);
         }
 
